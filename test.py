@@ -1,51 +1,21 @@
 import os 
 from dotenv import load_dotenv 
 load_dotenv()
+from openai import OpenAI
 
-os.environ("OPENAI_API_KEY") = os.getenv("OPENAI_API_KEY")
-openai.chat.completions.create(
-    model= "gpt-4o-mini"
-    messages=[role: user, content: "what is agentic ai?"]
-)
-
-openai.chat.conpletions.create(
-    model= "gpt-4o-mini",
-    message =["role":"user", "content": "what is llm engineering?"]
-)
-
-openai.chat.completions.create(
-    model = "gpt-4o-mini",
-    message = [{"role":"user", "coontent": "what is llm engineering ?"}]
-)
-
-os.environ("OPENAI_API_KEY") = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
-openai.chat.completions.completions.create(
-    model = "gpt-4o-mini",
-    message=[{"role": "user", "content": "what is agentic engineering?"}]
-)
 
-openai.chat.completions.create()
+messages = [
+    {"role": "system", "content": "youre a professional software engineeri"},
+    {"role":"user", "content": "what is software engineering?"}
+]
 
+response =  client.chat.completions.create(
+    model = "gpt-5-nano", messages = messages
+),
 
-
-
-
-
-openai.chat.completions.create(
-    model = "gpt-5 nano", content = [{"role":"user", "message":"what is llm engineering?"}]
-)
-
-
-
-
-response = openai.chat.completions.create(
-    model= "gpt-5-nano", message=[{"role":"user", "content":"what is llm engineering?"}]
-)
- 
-request = response.choices(0).message.content 
-print ("request")
+response.choice[0].message.content
 
 
 
@@ -66,8 +36,27 @@ print ("request")
 
 
 
-import os 
+
+
+
+
+
+import os
 from dotenv import load_dotenv
 load_dotenv()
+from openai import OpenAI
 
-response  = openai.chat.completions.create()
+openai=OpenAI()
+
+
+messages= [
+    {"role":"system", "content": "youre a professional software engineer"},
+    {"role":"user", "content":"what is software engineering?"}
+]
+
+response = openai.chat.completions.create(
+    model = "gpt 4o-mini", messages= "messages"
+)
+
+output = response.choices[0].message.content
+print (output)
