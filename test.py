@@ -33,9 +33,9 @@ message = [
     {"role":"system", "content":"youre a rofessional software engineer"},
     {"role": "user", "content":"what is sotware engneering? explain in maximum detail"}
 ]
-
+ 
 response = ollama.chat.completions.create(
-    model ="llama3.2:3b", messages = message
+    model ="qwen2.5:0.5b", messages = message
 )
 
 output= response.choices[0].message.content
