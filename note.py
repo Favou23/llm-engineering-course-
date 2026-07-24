@@ -7,8 +7,3 @@ ceers to me nd whas to come.. rooting for myself always...
 """
 
 
-
-
-
-
-
