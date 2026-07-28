@@ -47,3 +47,8 @@ specialized domains most are not phd leve, but closing in
 recent events, limited knowledge beyond training cut off, date: code often uses legacy apis/models
 can confidently make mistakes some curious blindspos, canjump too conclusions when coding 
 
+*** day 4***
+understanding transformers
+--tokens
+tokenization with tiktoken
+context window and api cost 
